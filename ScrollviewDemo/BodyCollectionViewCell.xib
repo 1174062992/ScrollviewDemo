@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BodyCollectionViewCellID" id="gTV-IL-0wX" customClass="BodyCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="222"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="215" height="222"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Cpc-HZ-3hu">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="222"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="HsV-3b-fza"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="3yI-0X-hoL"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Cpc-HZ-3hu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gau-DC-EQQ"/>
+                <constraint firstAttribute="trailing" secondItem="Cpc-HZ-3hu" secondAttribute="trailing" id="gvK-dt-dyA"/>
+                <constraint firstAttribute="bottom" secondItem="Cpc-HZ-3hu" secondAttribute="bottom" id="kfv-li-dvk"/>
+                <constraint firstItem="Cpc-HZ-3hu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="n1j-60-u8g"/>
+            </constraints>
+            <size key="customSize" width="215" height="222"/>
+            <connections>
+                <outlet property="tableview" destination="Cpc-HZ-3hu" id="u3d-UN-kn5"/>
+            </connections>
+            <point key="canvasLocation" x="2.5" y="-50"/>
+        </collectionViewCell>
+    </objects>
+</document>
